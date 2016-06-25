@@ -1,4 +1,4 @@
-Implementação IEDCS
+# IEDCS - Identity Enabled Distribution Control System #
 
 Trabalho desenvolvido por:
 	David Silva (64152)
