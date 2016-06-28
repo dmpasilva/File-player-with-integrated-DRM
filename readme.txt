@@ -28,4 +28,5 @@ Finally, all messages are signed in an HTTPS connection with the Portuguese Citi
 
 ## Owners ##
 
-The entire solution is developed by me and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva))
+
+The entire solution was developped by me and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
