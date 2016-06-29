@@ -3,7 +3,7 @@
 This project consists in a generic file player with an integrated DRM system, which was developed on the Security course of the Integrated Masters in Computers and Telematics Engineering (University of Aveiro). 
 Both client and server sides are implemented. With the client module, one can create a user account (which has an associated User Key on the server and a Device Key on the user's computer). Along with a pre-shared secret (Player Key), without ever transmitting all keys between the two sides, a File Key is computed for each file purchased by the user. Whenever a user purchases an item, the file is encrypted with the File Key and it is transferred to the user's computer. Only the user who bought the file can access its content, as it is never stored after decryption.
 In this assignment, we used ePUB files as purchasable and downloadable content. In order to display its content without ever storing the decrypted file, we wrote a simple extension to the EbookLib Python library which parses a binary stream of data. Client has a simple GUI implemented with Tkinter.
-Finally, all messages are signed in an HTTPS connection with the Portuguese Citizen card and the server included a deployable encrypted filesystem via EncFS.
+Finally, all messages are signed over an HTTPS connection with the Portuguese Citizen card and the server included a deployable EncFS-encrypted filesystem.
 
 ## Main keywords ##
 
