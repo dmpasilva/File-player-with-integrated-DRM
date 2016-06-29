@@ -1,25 +1,31 @@
-Implementação IEDCS
+# IEDCS - Identity Enabled Distribution Control System #
 
-Trabalho desenvolvido por:
-	David Silva (64152)
-	Rui Ribeiro (68794)
+This project consists in a generic file player with an integrated DRM system, which was developed on the Security course of the Integrated Masters in Computers and Telematics Engineering (University of Aveiro). 
+Both client and server sides are implemented. With the client module, one can create a user account (which has an associated User Key on the server and a Device Key on the user's computer). Along with a pre-shared secret (Player Key), without ever transmitting all keys between the two sides, a File Key is computed for each file purchased by the user. Whenever a user purchases an item, the file is encrypted with the File Key and it is transferred to the user's computer. Only the user who bought the file can access its content, as it is never stored after decryption.
+In this assignment, we used ePUB files as purchasable and downloadable content. In order to display its content without ever storing the decrypted file, we wrote a simple extension to the EbookLib Python library which parses a binary stream of data. Client has a simple GUI implemented with Tkinter.
+Finally, all messages are signed in an HTTPS connection with the Portuguese Citizen card and the server included a deployable encrypted filesystem via EncFS.
 
+## Main keywords ##
 
-Instruções de execução:
+* Python
+* Flask
+* PyCrypto
+* SQLAlchemy
+* PySqlite
+* EbookLib
+* TKinter
+* PyKCS11
+* PTEID
+* EncFS
+* Bash
 
-Virtualenv:
-	Os diretórios client e server dizem, respetivamente, às implementações do cliente e do servidor.
-	Os pacotes de cada um dos ambientes virtuais estão disponíveis nos ficheiros requirements_server.txt e requirements_client.txt
+## Deployment instructions ##
 
-Cliente:
-	Editar o ficheiro runme.sh para incluir o caminho para o interpretador do virtualenv do cliente
-	Executar runme.sh
+* There are two virtual environments in order to handle which each side's dependencies independently. All dependencies are in requirements_client.txt and requirements_server.txt. 
+* Client: Edit runme.sh in order to include the path to the virtualenv's Python interpreter and run the script.
+* Edit runme_xxxxx.sh (where xxxxxx is the platform's OS; e.g., runme_osx.sh or runme_linux.sh) in order to include the path to the virtualenv's Python interpreter and run the script. 
+* Passwords: both required passwords are "iedcs_2k15".
 
-	Nota: Desassociar um cliente de um equipamento pode levar à perda das compras realizadas pelo mesmo se estas não tiverem sido realizadas também noutro computador.
+## Owners ##
 
-Servidor:
-	Editar o ficheiro runme_xxxxx.sh (onde xxxxx é o Sistema Operativo) para incluir o caminho para o interpretador do virtualenv do servidor
-	Executar runme_osx.sh em OS X e runme_linux.sh em Linux
-
-	Passwords: ambas as passwords pedidas são "iedcs_2k15" (sem aspas)
-		No caso de a password do encfs estar incorreta, o erro no lado do cliente é a mensagem "This ebook was not purchase for this user".
+The entire solution was developped by me and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
