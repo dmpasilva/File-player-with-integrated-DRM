@@ -28,4 +28,4 @@ Finally, all messages are signed over an HTTPS connection with the Portuguese Ci
 
 ## Owners ##
 
-The entire solution was developped by me and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
+The entire solution was developped by Rui Espinha Ribeiro ([Espinha](https://bitbucket.org/Espinha)) and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
