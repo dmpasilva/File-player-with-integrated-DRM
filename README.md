@@ -5,7 +5,7 @@ Both client and server sides are implemented. With the client module, one can cr
 In this assignment, we used ePUB files as purchasable and downloadable content. In order to display its content without ever storing the decrypted file, we wrote a simple extension to the EbookLib Python library which parses a binary stream of data. Client has a simple GUI implemented with Tkinter.
 Finally, all messages are signed over an HTTPS connection with the Portuguese Citizen card and the server included a deployable EncFS-encrypted filesystem.
 
-## Main keywords ##
+## Keywords ##
 
 * Python
 * Flask
@@ -28,4 +28,4 @@ Finally, all messages are signed over an HTTPS connection with the Portuguese Ci
 
 ## Owners ##
 
-The entire solution was developped by Rui Espinha Ribeiro ([Espinha](https://bitbucket.org/Espinha)) and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
+The entire solution was developped by Rui Espinha Ribeiro ([Espinha](https://github.com/respinha)) and David Silva ([dmpasilva](https://bitbucket.org/dmpasilva)).
